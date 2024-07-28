@@ -3,6 +3,7 @@ version: '3.4'
 services:
   catalogdb:
     image: postgres
+    command: ["postgres", "-c", "log_statement=all", "-c", "log_destination=stderr"]
     build:
      context: .
      dockerfile: Services/Catalog/Catalog.API/Dockerfile

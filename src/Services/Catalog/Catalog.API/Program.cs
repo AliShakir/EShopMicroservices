@@ -1,3 +1,6 @@
+using Marten.Events.Projections;
+using Marten.Events;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container
@@ -8,7 +11,8 @@ builder.Services.AddMediatR(config =>
 });
 builder.Services.AddMarten(opts =>
 {
-    opts.Connection(builder.Configuration.GetConnectionString("Database")!);
+    opts.Connection(builder.Configuration.GetConnectionString("conString")!);
+    
 }).UseLightweightSessions();
 var app = builder.Build();
 
