@@ -12,7 +12,7 @@ namespace Ordering.Infrastructure.Data
 
         public DbSet<Customer> Customers => Set<Customer>();
         public DbSet<Product> Products => Set<Product>();
-        public DbSet<OrderItem> Orders => Set<OrderItem>();
+        public DbSet<Order> Orders1 => Set<Order>();
         public DbSet<OrderItem> OrderItems => Set<OrderItem>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
