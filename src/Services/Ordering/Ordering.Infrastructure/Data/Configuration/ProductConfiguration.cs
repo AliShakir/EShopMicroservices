@@ -1,6 +1,4 @@
 ﻿
-using Microsoft.Data.SqlClient;
-
 namespace Ordering.Infrastructure.Data.Configuration
 {
     public class ProductConfiguration : IEntityTypeConfiguration<Product>
