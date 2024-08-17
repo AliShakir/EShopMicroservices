@@ -1,7 +1,4 @@
 ﻿
-
-
-
 namespace Ordering.API.EndPoints
 {
     //- Accepts a CreateOrderRequest object.

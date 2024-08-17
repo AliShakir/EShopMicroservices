@@ -39,14 +39,13 @@ namespace Ordering.Domain.Models
 
         public void Update(OrderName orderName, Address shippingAddress, Address billingAddress, Payment payment, OrderStatus status)
         {
-            var order = new Order
-            {
-                OrderName = orderName,
-                ShippingAddress = shippingAddress,
-                BillingAddress = billingAddress,
-                Payment = payment,
-                Status = status,
-            };
+
+            OrderName = orderName;
+            ShippingAddress = shippingAddress;
+            BillingAddress = billingAddress;
+            Payment = payment;
+            Status = status;
+            
             AddDomainEventy(new OrderUpdatedEvent(this));
         }
 
